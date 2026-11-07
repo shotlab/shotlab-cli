@@ -22,6 +22,10 @@
     }
   },
   "channels": {
-    "stable": null
+    "stable": {
+      "version": "v1.0.9",
+      "minimumInstallerVersion": "1.5.0",
+      "checksumsSha256": "3c7a8c555a9bbfa3ce7dc8bffa1a4947f774fc93f3458b7af7e5e8a3ac6d4f44"
+    }
   }
 }
