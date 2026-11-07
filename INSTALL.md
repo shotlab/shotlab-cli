@@ -1,4 +1,4 @@
-# Shotlab 安装引导（installer 1.5.0）
+# Shotlab 安装引导（installer 1.5.1）
 
 本包负责安装 Shotlab CLI 和同版本完整 Skill。目前支持 Codex、Claude Code。
 安装器不会登录，不会提交生成任务，不会安装 LibTV。
@@ -18,6 +18,9 @@ https://raw.githubusercontent.com/shotlab/shotlab-cli/main/distribution.json
 引导包和在线入口会先校验其固定核心，再读取同一份配置，校验并加载推荐的新版安装逻辑。
 一次安装使用同一配置快照完成安装器与 CLI 选择；不在用户机器上修改引导包或建立后台更新任务。
 `installer-v1.0.0` 的旧 ZIP 不具备此功能：首次迁移须从上述长期入口重新获取引导包，不能继续使用保存的旧 ZIP。
+
+GitHub 安装、更新和指定版本安装均直接读取此清单中的附件地址与 SHA-256，不调用 GitHub Release API。
+无需 GitHub Token。指定版本必须已收录在清单中；未收录或校验失败时停止，请联系发布维护者。
 
 ## 给 Agent 的执行步骤
 

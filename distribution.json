@@ -1,23 +1,23 @@
 {
   "schemaVersion": 2,
   "installer": {
-    "version": "1.5.0",
+    "version": "1.5.1",
     "assets": {
       "shotlab-setup.zip": {
-        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.0/shotlab-setup.zip",
-        "sha256": "ff4710ffe14414be34a3fc7d24f6d5ae3f51016d058b5ffd1ddb737b0f8a5f43"
+        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.1/shotlab-setup.zip",
+        "sha256": "f3db461f3f2f7fc2ef5552791284c5995b228ac72d2ce7f9f8ace3091ee4e89a"
       },
       "installer.mjs": {
-        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.0/installer.mjs",
-        "sha256": "f63d6978bd79df13e53bf1509e29117cf0e04352d5077b5c03f099cfbcda7ca8"
+        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.1/installer.mjs",
+        "sha256": "c3e414afb721d1c1ba2fb89f3b22b75ece98e670f9d69ab20c9ac6c1a773ccc2"
       },
       "install.sh": {
-        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.0/install.sh",
-        "sha256": "61904abe53e6a9cb8b33c6408403381d2848a76d47c28250744da1896b0d45c7"
+        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.1/install.sh",
+        "sha256": "d5ed40b724c4c47150feb34d34cce05cfe9404718bb312a5cfc90546fa6956a5"
       },
       "install.ps1": {
-        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.0/install.ps1",
-        "sha256": "868e6f0585fc1b3c5a3c528f9dc30f6eb6c4a75f0c1c486b69c9661450a5690c"
+        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.1/install.ps1",
+        "sha256": "f3f8707781b442d73b46d3cd9f5be14537c665c90be544a19ce8ea6bdd51a86e"
       }
     }
   },
@@ -26,6 +26,40 @@
       "version": "v1.0.9",
       "minimumInstallerVersion": "1.5.0",
       "checksumsSha256": "3c7a8c555a9bbfa3ce7dc8bffa1a4947f774fc93f3458b7af7e5e8a3ac6d4f44"
+    }
+  },
+  "releases": {
+    "v1.0.9": {
+      "assets": {
+        "shotlab_1.0.9_prod_darwin_amd64.tar.gz": {
+          "url": "https://github.com/shotlab/shotlab-cli/releases/download/v1.0.9/shotlab_1.0.9_prod_darwin_amd64.tar.gz",
+          "sha256": "66ce205290e9de72f338b3dbbc747b4408c8580a684877ce62f3a7815f3e6621"
+        },
+        "shotlab_1.0.9_prod_darwin_arm64.tar.gz": {
+          "url": "https://github.com/shotlab/shotlab-cli/releases/download/v1.0.9/shotlab_1.0.9_prod_darwin_arm64.tar.gz",
+          "sha256": "2091932db24604752e1ba769cac031fe82655347dd044273ee4f1b6de3a49b97"
+        },
+        "shotlab_1.0.9_prod_linux_amd64.tar.gz": {
+          "url": "https://github.com/shotlab/shotlab-cli/releases/download/v1.0.9/shotlab_1.0.9_prod_linux_amd64.tar.gz",
+          "sha256": "415c7d32674cf7dca23301d937d1f83dd339a93afc5b509d931354c5bb416b71"
+        },
+        "shotlab_1.0.9_prod_linux_arm64.tar.gz": {
+          "url": "https://github.com/shotlab/shotlab-cli/releases/download/v1.0.9/shotlab_1.0.9_prod_linux_arm64.tar.gz",
+          "sha256": "2a23155ebf784193423e4f695d4a3e21084ff43c2c0c4b07196f813145a7f45c"
+        },
+        "shotlab_1.0.9_prod_windows_amd64.zip": {
+          "url": "https://github.com/shotlab/shotlab-cli/releases/download/v1.0.9/shotlab_1.0.9_prod_windows_amd64.zip",
+          "sha256": "248095467e2c0aeba0d81fd7bf7a5079f5fd7961e654d6ef5dacf64a2fe2bb42"
+        },
+        "shotlab_skill_1.0.9.zip": {
+          "url": "https://github.com/shotlab/shotlab-cli/releases/download/v1.0.9/shotlab_skill_1.0.9.zip",
+          "sha256": "f00d76d4c5ee40837f340102d1daadcd0708ef4fa55648c28ce2f902d131cf84"
+        },
+        "checksums.txt": {
+          "url": "https://github.com/shotlab/shotlab-cli/releases/download/v1.0.9/checksums.txt",
+          "sha256": "3c7a8c555a9bbfa3ce7dc8bffa1a4947f774fc93f3458b7af7e5e8a3ac6d4f44"
+        }
+      }
     }
   }
 }

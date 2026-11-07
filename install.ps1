@@ -8,9 +8,9 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
-$Base = 'https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.0'
+$Base = 'https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.1'
 $DistributionAudience = 'public'
-$CoreSha = 'f63d6978bd79df13e53bf1509e29117cf0e04352d5077b5c03f099cfbcda7ca8'
+$CoreSha = 'c3e414afb721d1c1ba2fb89f3b22b75ece98e670f9d69ab20c9ac6c1a773ccc2'
 $NodeVersion = '24.22.0'
 $NodeSha = 'f9683a19877e12a9b167305c8db71040d812876359de21f0d2e97c3f321f80c3'
 $Root = Join-Path $env:LOCALAPPDATA 'Shotlab\installer'
