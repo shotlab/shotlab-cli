@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 2,
+  "installer": {
+    "version": "1.5.0",
+    "assets": {
+      "shotlab-setup.zip": {
+        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.0/shotlab-setup.zip",
+        "sha256": "ff4710ffe14414be34a3fc7d24f6d5ae3f51016d058b5ffd1ddb737b0f8a5f43"
+      },
+      "installer.mjs": {
+        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.0/installer.mjs",
+        "sha256": "f63d6978bd79df13e53bf1509e29117cf0e04352d5077b5c03f099cfbcda7ca8"
+      },
+      "install.sh": {
+        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.0/install.sh",
+        "sha256": "61904abe53e6a9cb8b33c6408403381d2848a76d47c28250744da1896b0d45c7"
+      },
+      "install.ps1": {
+        "url": "https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.0/install.ps1",
+        "sha256": "868e6f0585fc1b3c5a3c528f9dc30f6eb6c4a75f0c1c486b69c9661450a5690c"
+      }
+    }
+  },
+  "channels": {
+    "stable": null
+  }
+}
