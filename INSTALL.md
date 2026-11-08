@@ -1,4 +1,4 @@
-# Shotlab 安装引导（installer 1.5.1）
+# Shotlab 安装引导（installer 1.6.0）
 
 本包负责安装 Shotlab CLI 和同版本完整 Skill。目前支持 Codex、Claude Code。
 安装器不会登录，不会提交生成任务，不会安装 LibTV。
@@ -87,9 +87,9 @@ CLI/Skill 文件被修改或缺失时会停止。请保存自己的修改，再�
 
 macOS/Linux：`~/.local/share/shotlab-installer/`；Windows：`%LOCALAPPDATA%\Shotlab\installer\`。
 `install.json` 保存版本、渠道、宿主与文件校验记录；`backups/` 为每次升级独立保存备份。
-`runtime/` 是需要时安装的 Node 24.22.0，系统 Node 不会被替换；`npm-cache/` 供固定
-`skills@1.7.0` 使用。安装工具只在隔离 HOME 中安装完整 Skill，然后以事务复制到宿主目录。
-Codex 使用标准工具的 `~/.agents/skills/shotlab`，Claude Code 使用
+`runtime/` 是需要时安装的 Node 24.22.0，系统 Node 不会被替换。安装器使用 Node 内置模块，
+在隔离目录暂存已校验的完整 Skill，再以事务复制到宿主目录，不调用 npm/npx 或下载第三方包。
+旧版遗留的 `npm-cache/` 不再使用。Codex 使用 `~/.agents/skills/shotlab`，Claude Code 使用
 `${CLAUDE_CONFIG_DIR:-~/.claude}/skills/shotlab`。Codex 旧 `.codex/skills/shotlab` 存在时停止，避免重复加载。
 自定义宿主目录必须仍在用户目录中且不包含链接。
 
