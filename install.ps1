@@ -8,9 +8,9 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
-$Base = 'https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.5.1'
+$Base = 'https://github.com/shotlab/shotlab-cli/releases/download/installer-v1.6.0'
 $DistributionAudience = 'public'
-$CoreSha = 'c3e414afb721d1c1ba2fb89f3b22b75ece98e670f9d69ab20c9ac6c1a773ccc2'
+$CoreSha = '0c8b2e11550314e6e1f0e52cf5a6c6db5367d1e9ab1df1a34fee8a6d8ef814ea'
 $NodeVersion = '24.22.0'
 $NodeSha = 'f9683a19877e12a9b167305c8db71040d812876359de21f0d2e97c3f321f80c3'
 $Root = Join-Path $env:LOCALAPPDATA 'Shotlab\installer'
@@ -51,7 +51,7 @@ try {
   else { Fetch "$Base/installer.mjs" $Core }
   if ((Get-FileHash -Algorithm SHA256 -LiteralPath $Core).Hash.ToLowerInvariant() -ne $CoreSha) { throw '共享安装逻辑 SHA-256 不一致' }
   $Node = $null
-  if ((Get-Command node -ErrorAction SilentlyContinue) -and (Get-Command npx -ErrorAction SilentlyContinue)) {
+  if (Get-Command node -ErrorAction SilentlyContinue) {
     & node -e 'const [a,b]=process.versions.node.split(".").map(Number);process.exit(a>22||(a===22&&b>=20)?0:1)'
     if ($LASTEXITCODE -eq 0) { $Node = (Get-Command node).Source }
   }
@@ -71,7 +71,7 @@ try {
       Move-Item -LiteralPath (Join-Path $Scratch "node-v$NodeVersion-win-x64") -Destination $Runtime
     }
     $Node = Join-Path $Runtime 'node.exe'
-    if (-not (Test-Path -LiteralPath (Join-Path $Runtime 'node_modules\npm\bin\npx-cli.js'))) { throw "运行时不完整：$Runtime；请备份并移出后重试。" }
+    if (-not (Test-Path -LiteralPath $Node -PathType Leaf)) { throw "运行时不完整：$Runtime；请备份并移出后重试。" }
     if ((& $Node --version) -ne "v$NodeVersion") { throw '专用运行时版本不一致' }
     Remove-Item -LiteralPath $RuntimeLock; $RuntimeLock = $null
     $env:PATH = "$Runtime;$env:PATH"
