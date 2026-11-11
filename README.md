@@ -5,7 +5,7 @@
 > 1. 阅读长期有效的安装说明：
 > https://raw.githubusercontent.com/shotlab/shotlab-cli/main/INSTALL.md
 > 2. 按说明读取公开的 `distribution.json`，下载并校验当前安装引导包。已有安装时沿用当前渠道，首次使用正式渠道，安装该渠道推荐的最新版 CLI 和完整 Skill，选择当前 Agent 对应的宿主。除非我明确指定版本，否则不要固定版本号。
-> 3. 检查本机依赖，执行 `shotlab login`，展示并打开本次登录的授权链接，等待我在网页完成授权，再执行 `shotlab login --complete`。
+> 3. 检查本机依赖；缺少 ffmpeg/ffprobe 时，先检查已有安装和 PATH，再由你按系统安装 FFmpeg、验证两个工具可运行，不要只把安装命令交给我。实际需要管理员密码、授权弹窗或遇到权限限制时，再请我完成必要步骤。执行 `shotlab login`，展示并打开本次登录的授权链接，等待我在网页完成授权，再执行 `shotlab login --complete`。
 > 4. 验证 CLI 与 Skill 版本、登录状态及模型查询。就绪后告诉我可以开始哪些创作；如果还有缺失配置，请明确说明。不要自动提交付费生成任务。
 
 支持 Codex、Claude Code。正式版连接正式环境，账号与可用模型以登录后实际查询结果为准。
@@ -43,7 +43,7 @@ Claude Code 将 `codex` 改为 `claude-code`。固定版本可用 `--version` / 
 
 五种发行目标：macOS arm64/x64、Linux arm64/x64、Windows x64。
 具体实机验证结果见安装器 Release 说明；未实机验证的目标不宣称已可用。
-CLI 与完整 Skill 随版本一起安装。安装器自动检测 ffmpeg/ffprobe，缺失或异常时按系统显示安装命令与 PATH 配置提示，由用户执行；同版本重跑也会复查。Linux 凭据服务需单独配置。
+CLI 与完整 Skill 随版本一起安装。安装器自动检测 ffmpeg/ffprobe，同版本重跑也会复查。缺失或异常时显示当前系统的安装命令与 PATH 提示；由 Agent 配置时，Agent 继续检查已有安装、补齐依赖并验证，实际需要管理员密码、授权弹窗或遇到权限限制时才请用户参与。直接在终端安装的用户可自行按提示处理。Linux 凭据服务需单独配置。
 不提供后台自动升级，也不要单独用 `skills update` 更新 Shotlab，以免 CLI 和 Skill 版本不一致。
 
 本仓库只保存公开安装入口、用户说明与发行附件。源码与发布凭据不在本仓库维护。
